@@ -24,5 +24,4 @@ def inference(model_inputs:dict) -> dict:
     # Run the model
     result = model.predict(sentences)
 
-    # Return the results as a dictionary
-    return result
+    return {"output": result.tolist()}
