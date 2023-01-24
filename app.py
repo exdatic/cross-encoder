@@ -1,4 +1,5 @@
 from sentence_transformers import CrossEncoder
+import torch
 
 
 # Init is ran on server startup
