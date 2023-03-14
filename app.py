@@ -13,9 +13,11 @@ def init():
 
 # Inference is ran for every server call
 # Reference your preloaded global model variable here.
-def inference(model_inputs:dict) -> dict:
+def inference(model_inputs: dict) -> dict:
     global model
-
+    # for pinging the model
+    if not model_inputs:
+        return {}
     # Parse out your arguments
     sentences = model_inputs.get('sentence_pairs', None)
     if sentences == None:
